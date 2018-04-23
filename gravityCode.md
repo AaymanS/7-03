@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------------------
---
--- main.lua
---
+-- Created by: Aayman Shameem
+-- Created on: Apr 23, 2018
+-- This code will give gravity to the character
 -----------------------------------------------------------------------------------------
 
 -- Gravity
@@ -21,9 +21,18 @@ physics.addBody( theGround, "static", {
     bounce = 0.3 
     } )
 
+local theGround = display.newImage( "./assets/sprites/land.png" )
+theGround.x = display.contentCenterX + 800
+theGround.y = display.contentCenterY + 100
+theGround.id = "the ground"
+physics.addBody( theGround, "static", { 
+    friction = 0.5, 
+    bounce = 0.3 
+    } )
+
 local monsterCat = display.newImage( "./assets/sprites/Monstercat.png" )
-monsterCat.x = display.contentCenterX
-monsterCat.y = display.contentCenterY
+monsterCat.x = display.contentCenterX + 900
+monsterCat.y = display.contentCenterY - 500
 monsterCat.id = "the character"
 monsterCat.isFixedRotation = true
 physics.addBody( monsterCat, "dynamic", { 
