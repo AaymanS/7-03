@@ -21,11 +21,11 @@ physics.addBody( theGround, "static", {
     bounce = 0.3 
     } )
 
-local theGround = display.newImage( "./assets/sprites/land.png" )
-theGround.x = display.contentCenterX + 800
-theGround.y = display.contentCenterY + 100
-theGround.id = "the ground"
-physics.addBody( theGround, "static", { 
+local theGround2 = display.newImage( "./assets/sprites/land.png" )
+theGround2.x = display.contentCenterX + 800
+theGround2.y = display.contentCenterY + 100
+theGround2.id = "the ground"
+physics.addBody( theGround2, "static", { 
     friction = 0.5, 
     bounce = 0.3 
     } )
